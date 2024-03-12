@@ -1,0 +1,87 @@
+#Enunciado:
+
+#1 - Utilizando a linguagem de programação Python, implemente um ou mais códigos de exemplo dos seguintes elementos: uma estrutura de repetição; uma estrutura de tomada de decisão. 
+#2 - Envie seu código e o comprovante de execução para seu repositório no github. 
+#3 - Envie o link do seu repositório
+
+################# ESTRUTURA DE REPETIÇÃO ########################
+
+#Começamos definindo um vetor 'lazer' com todas as atividades do meu final de semana 
+lazer = ['tenis','basquete', 'viagem', 'livros', 'filmes', 'cozinhar']
+
+#Vamos definir a função 'meu_fds()'; Ela vai descrever como foi meu final de semana
+def meu_fds():
+  #Printamos na tela do usuário a seguinte frase.
+  print("Meu FDS foi incrível...") 
+  #Definimos o 'contador' que vai nos auxiliar
+  contador = 0
+  #Definimos uma estrutura de repetição que vai iterar pela minha lista de tarefas do final de semana.
+  for atividades in lazer:
+    #Utilizamos a operação abaixo para adicionar uma unidade ao nosso contador, toda vez que a nossa estrutura de repetição por esse ponto
+    contador+=1
+    #Printamos na tela do usuário o çontador (e para isso, utilizamos uma função 'str', dado que contador é nunmérico), concatenado com um hífen e a respectiva atividade
+    print(str(contador) + " - " + atividades)
+  #Por fim, printamos na tela do usuário, a mensagem mais importante...  
+  print("...e ainda por cima, o mengão ganhou!")
+
+#Rodamos a função
+meu_fds()
+
+#Execução do código:
+
+Meu FDS foi incrível...
+1 - tenis
+2 - basquete
+3 - viagem
+4 - livros
+5 - filmes
+6 - cozinhar
+...e ainda por cima, o mengão ganhou!
+
+  
+  
+################# ESTRUTURA DE TOMADA DE DECISÃO ########################
+  
+#Definimos as listas 'numeros_possiveis' e 'respostas_possiveis' que utilizaremos mais a frente em nosso código 
+
+numeros_possiveis = [1,2,3]
+respostas_possiveis = ['One Direction', '2Pac', 'three, my lucky number']
+
+#Definimos a função 'Toma_decisao'. Essa função lerá um número inputado pelo usuário e, dependendo da resposta, terá diferentes respostas. 
+
+def Toma_decisao():
+  #Definimos a variável 'escolha_usuário' que recebe um número inteiro, inputado pelo usuário.
+  escolha_usuario = int(input('Escolha um número de 1 a 3, inteiro e positivo: '))
+  #Definimos uma estruturura condicional que verifica se o número inserido pelo usuário está contido nas respostas possíveis
+  if escolha_usuario in numeros_possiveis:
+    #Caso esteja contido, printa a resposta correspondente ao número escolhido pelo usuário. 
+    print(str(escolha_usuario) + " » " + respostas_possiveis[escolha_usuario-1]) #Repare que o '-1' no índice se dá pois o python começa em 0.
+  #Caso a condição do If não seja atendida, entramos no else.
+  else:
+    #No else, printamos o erro gerado pelo usuário.
+    print("ERRO. VERIFICAR NÚMERO INSERIDO.") 
+
+#Rodamos a função.
+Toma_decisao()
+
+#Execução do código:
+
+#Input #1:
+
+Escolha um número de 1 a 3, inteiro e positivo: 1
+1 » One Direction
+
+#Input #2:
+
+Escolha um número de 1 a 3, inteiro e positivo: 2
+2 » 2Pac
+
+#Input #3:
+
+Escolha um número de 1 a 3, inteiro e positivo: 3
+3 » three, my lucky number
+
+#Input #123:
+
+Escolha um número de 1 a 3, inteiro e positivo: 123
+ERRO. VERIFICAR NÚMERO INSERIDO.
